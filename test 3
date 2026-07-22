@@ -1,0 +1,44 @@
+function runWorkflow(){
+
+    let prompt = document.getElementById("prompt").value;
+
+    if(prompt === ""){
+        alert("Please enter a coding request.");
+        return;
+    }
+
+    let output = "";
+
+    output += `
+    <div class="step">
+        <h3>Step 1 - Understand the Request</h3>
+        <p>The AI analyzes your prompt:</p>
+        <p><b>${prompt}</b></p>
+    </div>`;
+
+    output += `
+    <div class="step">
+        <h3>Step 2 - Plan</h3>
+        <p>Create an implementation strategy and determine required technologies.</p>
+    </div>`;
+
+    output += `
+    <div class="step">
+        <h3>Step 3 - Generate Code</h3>
+        <p>OpenCode generates the necessary HTML, CSS, JavaScript, or backend code.</p>
+    </div>`;
+
+    output += `
+    <div class="step">
+        <h3>Step 4 - Review</h3>
+        <p>Validate syntax, detect errors, and improve readability.</p>
+    </div>`;
+
+    output += `
+    <div class="step">
+        <h3>Step 5 - Deliver Result</h3>
+        <p>The completed code is ready for testing and deployment.</p>
+    </div>`;
+
+    document.getElementById("result").innerHTML = output;
+}
